@@ -3,7 +3,7 @@ import {ChangeEvent, createContext, Dispatch, SetStateAction, useCallback, useCo
 import {generateUniqueID} from "web-vitals/dist/modules/lib/generateUniqueID";
 import {AppContext} from "../App/App";
 import {BlockContext} from "../Block/Block";
-import './FormToAdd.css'
+import './FormAdd.css'
 
 export interface FormAddContextProps {
   taskToAdd: ITask,
@@ -54,7 +54,7 @@ export const FormAdd = () => {
 
   return (
     <FormAddContext.Provider value={{ taskToAdd, setTaskToAdd }}>
-      <div className={'form form-add'}>
+      <div className={'FormAdd'}>
         <input title={'name'} type={'text'} value={taskToAdd.name} placeholder={'New task...'} onChange={handleInputChange}/>
         <input title={'description'} type={'text'} value={taskToAdd.description} placeholder={'Description...'} onChange={handleInputChange} />
         <button className={'button-submit'} onClick={handleAddTask}>Submit</button>

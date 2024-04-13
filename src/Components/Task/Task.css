@@ -1,4 +1,4 @@
-.task-details {
+.Task {
     display: flex;
     flex-direction: column;
     gap: 2rem;
@@ -19,19 +19,18 @@
     animation: fadeInRight 0.5s ease-in-out;
 }
 
-
-.task-details-title {
+.Task-title {
     margin: 0;
 }
 
-.task-details-text {
+.Task-text {
     margin: 0;
     font-size: 18px;
 
     cursor: pointer;
 }
 
-.details-button {
+.Task-button {
     position: absolute;
     right: 1.5rem;
     top: 1.5rem;
@@ -41,10 +40,10 @@
     background-color: transparent;
 }
 
-.details-svg {
+.Task-svg {
     transform: rotate(45deg);
 }
 
-.details-button:hover {
+.Task-button:hover {
     background-color: rgb(222, 222, 222);
 }

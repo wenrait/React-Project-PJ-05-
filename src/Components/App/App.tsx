@@ -33,7 +33,7 @@ function App() {
     <AppContext.Provider value={{ data, setData }}>
       <div className={'App'}>
         <header>
-          <Section className={'header'} />
+          <Section className={'Header'} />
         </header>
         <main>
           <BrowserRouter>
@@ -44,11 +44,10 @@ function App() {
           </BrowserRouter>
         </main>
         <footer>
-          <Section className={'footer'} data={data}/>
+          <Section className={'Footer'} data={data}/>
         </footer>
       </div>
     </AppContext.Provider>
-
   )
 }
 

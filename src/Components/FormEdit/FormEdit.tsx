@@ -4,7 +4,7 @@ import {ChangeEvent, useCallback, useContext, useEffect} from "react";
 import {TaskContext} from "../Task/Task";
 import {AppContext} from "../App/App";
 
-import './FormToEdit.css'
+import './FormEdit.css'
 
 export const FormEdit = () => {
   const { setData } = useContext(AppContext);
@@ -56,9 +56,8 @@ export const FormEdit = () => {
 
 
   return (
-    <div className={'form-to-edit'}>
+    <div className={'FormEdit'}>
       <input
-        className={'form-to-edit-input'}
         title={'description'}
         type={'text'}
         value={text}

@@ -1,10 +1,10 @@
-.form-to-edit {
+.FormEdit {
     display: flex;
     flex-direction: column;
     gap: 2rem;
 }
 
-.form-to-edit-input {
+.FormEdit  input {
     font-size: 18px;
     border: 0;
     padding: 0;

@@ -1,64 +1,28 @@
-.form-move {
+.FormMove {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
     max-height: 86px;
-
     animation: fadeInForm 0.5s ease-in-out;
 }
 
-.dropdown {
+.FormMove__dropdown {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
 }
 
-.select {
-    font-family: Roboto, sans-serif;
-    font-size: 18px;
-    padding: 10px;
-    border: 0;
-    border-radius: 5px;
-    margin-right: 0.75rem;
-}
-
-.selected-option {
+.FormMove__dropdown__selected {
     background-color: white;
     border-radius: 5px;
     position: relative;
 }
 
-.selected-option:hover {
+.FormMove__dropdown__selected:hover {
     background-color: rgb(222, 222, 222);
 }
 
-.selected-option, .option {
-    display: flex;
-    align-items: center;
-    min-height: 42px;
-    box-sizing: border-box;
-    padding: 10px;
-
-    transition: 0.2s;
-
-    overflow: hidden;
-    text-overflow: ellipsis;
-
-    cursor: pointer;
-}
-
-.option:hover {
-    background-color: rgb(222, 222, 222);
-}
-
-.option:first-child {
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-}
-
-.option:last-child {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-}
-
-.options {
+.FormMove__dropdown__options {
     position: absolute;
     top: calc(100% - 32px - 0.75rem);
     width: calc(100% - 1.5rem);
@@ -72,19 +36,39 @@
     animation: dropdown 0.5s ease-in-out;
 }
 
-.option {
+.FormMove__dropdown__selected, .FormMove__dropdown__options__option {
+    display: flex;
+    align-items: center;
+    min-height: 42px;
+    box-sizing: border-box;
     padding: 10px;
-
+    transition: 0.2s;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    cursor: pointer;
     animation: fadeIn 0.5s ease-in-out;
 }
 
-.selected-option-arrow {
+.FormMove__dropdown__options__option:hover {
+    background-color: rgb(222, 222, 222);
+}
+
+.FormMove__dropdown__options__option:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.FormMove__dropdown__options__option:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.FormMove__dropdown__selected__arrow {
     position: absolute;
     right: 0.75rem;
     display: flex;
     align-items: center;
     justify-content: center;
     width: fit-content;
-
     transition: 0.2s;
 }

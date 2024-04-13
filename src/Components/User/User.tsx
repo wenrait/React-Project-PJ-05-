@@ -8,21 +8,19 @@ export const User = () => {
   const options = ['Profile', 'Log out']
 
   return (
-    <div className={"user"}>
-      <div className="user-avatar-container">
-        <img src={userAvatar} alt="user-avatar" />
+    <div className={"User"}>
+      <div className="User__avatar">
+        <img src={userAvatar} alt="User avatar" />
 
       </div>
-
-      <button className="user-button" onClick={() => setIsOpen(!isOpen)}><Arrow fill={'white'}/></button>
+      <button className="User__button" onClick={() => setIsOpen(!isOpen)}><Arrow fill={'white'}/></button>
       {
         isOpen && (
-
-          <div className={'user-dropdown'}>
-            <div className={'square'}></div>
-            <div className={'user-dropdown-options'}>
+          <div className={'User__dropdown'}>
+            <div className={'User__dropdown'}></div>
+            <div className={'User__dropdown__options'}>
               {
-                options.map((option: string) => <div key={option} className={'user-dropdown-option'}>{option}</div>)
+                options.map((option: string) => <div key={option} className={'User__dropdown__options__option'}>{option}</div>)
               }
             </div>
           </div>

@@ -1,9 +1,12 @@
+.App, header, main, footer {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+}
+
 .App {
   min-height: 100vh;
-
-  display: flex;
   flex-direction: column;
-
   font-family: Roboto, sans-serif;
 }
 
@@ -12,7 +15,6 @@ header {
 }
 
 main {
-  display: flex;
   flex: 1;
   background: rgb(0, 121, 191);
   box-sizing: border-box;
@@ -20,12 +22,6 @@ main {
 
 footer {
   background: rgb(0, 103, 163);
-}
-
-header, main, footer {
-  width: 100%;
-  display: flex;
-  justify-content: center;
 }
 
 button {
@@ -69,6 +65,21 @@ button:disabled {
 
 .button-submit:hover {
   background: rgb(0, 89, 134);
+}
+
+::-webkit-scrollbar {
+  background-color: white;
+  width: 10px;
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(203, 203, 203, 1);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(171, 171, 171, 1);
 }
 
 @keyframes fadeIn {

@@ -1,4 +1,4 @@
-.header, .footer {
+.Header, .Footer {
     display: flex;
     justify-content: space-between;
 
@@ -11,25 +11,31 @@
     color: white;
 }
 
-.header-title {
+.Header__title {
     margin: 0;
     font-size: 28px;
     font-weight: 400;
 }
 
-.footer-tasks-container {
+.Footer__tasks {
     display: flex;
     gap: 2rem;
 }
 
-@media (max-width: 600px) {
-    .header {
+.Footer__span {
+    font-size: 18px;
+}
+
+@media (max-width: 650px) {
+    .Header {
         justify-content: flex-end;
     }
-    .header-title {
+
+    .Header__title {
         display: none;
     }
-    .footer {
+
+    .Footer {
         display: none;
     }
 

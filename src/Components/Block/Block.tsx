@@ -36,8 +36,8 @@ export const Block = ({id, title, tasks }: BlockProps) => {
 
   return (
     <BlockContext.Provider value={{ block, prevBlock, formVisible, setFormVisible }}>
-      <div className="block">
-        <h2 className="block-title">{title}</h2>
+      <div className="Block">
+        <h2 className="Block__title">{title}</h2>
         <List title={title} tasks={tasks}/>
 
       </div>

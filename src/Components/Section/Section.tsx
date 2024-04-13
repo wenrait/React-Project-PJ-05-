@@ -4,7 +4,7 @@ import './Section.css';
 
 
 export interface SectionProps {
-  className: 'header' | 'footer';
+  className: 'Header' | 'Footer';
   data?: DataProps[];
 }
 
@@ -20,18 +20,18 @@ export const Section = ({ className, data }: SectionProps) => {
   }
 
   return (
-    className === 'header' ? (
-      <section className={'header'}>
-        <h1 className="header-title">Awesome Kanban Board</h1>
+    className === 'Header' ? (
+      <section className={'Header'}>
+        <h1 className="Header__title">Awesome Kanban Board</h1>
         <User />
       </section>
     ) : (
-      <section className={'footer'}>
-        <div className="footer-tasks-container">
-          <span className="active-tasks">Active Tasks: {activeTasks()}</span>
-          <span className="finished-tasks">Finished Tasks: {finishedTasks()}</span>
+      <section className={'Footer'}>
+        <div className="Footer__tasks">
+          <span className="Footer__span">Active Tasks: {activeTasks()}</span>
+          <span className="Footer__span">Finished Tasks: {finishedTasks()}</span>
         </div>
-        <span className="project-author">Kanban board by Dmitry Egorov, 2024</span>
+        <span className="Footer__span">Kanban board by Dmitry Egorov, 2024</span>
       </section>
     )
 

@@ -2,19 +2,15 @@ import {DataProps, ITask} from "../../data";
 import {useCallback, useContext, useState} from "react";
 import {AppContext} from "../App/App";
 import {BlockContext} from "../Block/Block";
-import './FormToMove.css'
+import './FormMove.css'
 import {Arrow} from "../Arrow/Arrow";
 
 export const FormMove = () => {
   const { setData } = useContext(AppContext);
   const { block, prevBlock, setFormVisible } = useContext(BlockContext);
 
-  // const optionsRef = useRef<HTMLDivElement>(null)
-
   const [isOpen, setIsOpen] = useState<boolean>(false);
   const [taskToMove, setTaskToMove] = useState<ITask>({id: '', name: ' ', description: ''});
-
-  // useOutsideClickListener({ ref: optionsRef, callback: () => setIsOpen(false)})
 
   const handleSelectTask = useCallback((selectedTask: ITask) => {
    setTaskToMove({name: selectedTask.name, description: selectedTask.name, id: selectedTask.id})
@@ -49,19 +45,28 @@ export const FormMove = () => {
   }, []);
 
   return (
-    <div className={'form form-move'}>
-      <div className={"dropdown"} onClick={() => setIsOpen(!isOpen)}>
-        <div className={"selected-option"}>
+    <div className={'Form FormMove'}>
+      <div className={"FormMove__dropdown"} onClick={() => setIsOpen(!isOpen)}>
+        <div className={"FormMove__dropdown__selected"}>
           {taskToMove.name}
-          <div className={"selected-option-arrow"} style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}>
+          <div className={"FormMove__dropdown__selected__arrow"} style={{ transform: isOpen ? 'rotate(180deg)' : 'rotate(0deg)' }}>
             <Arrow fill={'black'}/>
           </div>
         </div>
         {
           isOpen && (
-          <div className={"options"}>
-            {prevBlock?.tasks.map((task: ITask) => <div key={task.id} className={"option"}
-                                                        onClick={() => handleSelectTask(task)}>{task.name}</div>)}
+          <div className={"FormMove__dropdown__options"}>
+            {
+              prevBlock?.tasks.map((task: ITask) => (
+                <div
+                  key={task.id}
+                  className={"FormMove__dropdown__options__option"}
+                  onClick={() => handleSelectTask(task)}
+                >
+                  {task.name}
+                </div>
+              ))
+            }
           </div>
           )
         }

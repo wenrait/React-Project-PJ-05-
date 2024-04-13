@@ -3,7 +3,7 @@ import {createContext, Dispatch, SetStateAction, useContext, useState} from "rea
 import {Link, useParams} from "react-router-dom";
 import {AppContext} from "../App/App";
 import {DataProps, ITask} from "../../data";
-import {FormEdit} from "../Forms/FormEdit";
+import {FormEdit} from "../FormEdit/FormEdit";
 import plus from "../../svg/button-plus.svg";
 
 export interface TaskContextProps {
@@ -42,15 +42,15 @@ export const Task = () => {
 
   return (
     <TaskContext.Provider value={{ blockTitle, taskId, formVisible, setFormVisible, text, setText }}>
-      <div className={'task-details'}>
-        <h2 className={'task-details-title'}>{task?.name}</h2>
+      <div className={'Task'}>
+        <h2 className={'Task-title'}>{task?.name}</h2>
         {
           formVisible ?
             <FormEdit />
             :
-            <p className={'task-details-text'} onClick={() => setFormVisible(true)}>{text}</p>
+            <p className={'Task-text'} onClick={() => setFormVisible(true)}>{text}</p>
         }
-        <Link to={'/'}><button className={'details-button'}><img src={plus} className={'details-svg'} alt={'plus'}/></button></Link>
+        <Link to={'/'}><button className={'Task-button'}><img src={plus} className={'Task-svg'} alt={'plus'}/></button></Link>
       </div>
     </TaskContext.Provider>
   )

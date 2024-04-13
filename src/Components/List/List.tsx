@@ -3,8 +3,8 @@ import {Link} from "react-router-dom";
 import './List.css';
 import {useContext} from "react";
 import {BlockContext} from "../Block/Block";
-import {FormMove} from "../Forms/FormMove";
-import {FormAdd} from "../Forms/FormAdd";
+import {FormMove} from "../FormMove/FormMove";
+import {FormAdd} from "../FormAdd/FormAdd";
 import plus from "../../svg/button-plus.svg";
 
 export interface ListProps {
@@ -16,8 +16,8 @@ export const List = ({ title, tasks }: ListProps) => {
   const { formVisible, setFormVisible, prevBlock} = useContext(BlockContext);
 
   return (
-    <ul className={'block-list'}>
-      {tasks.map((task: ITask) => <Link to={`/${title}/${task.id}`} key={task.id} className={'block-list-link'}><li>{task.name}</li></Link>)}
+    <ul className={'List'}>
+      {tasks.map((task: ITask) => <Link to={`/${title}/${task.id}`} key={task.id} className={'List-Link'}><li>{task.name}</li></Link>)}
       {
         formVisible?
           prevBlock?
