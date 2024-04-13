@@ -42,7 +42,7 @@
     z-index: 1;
 }
 
-.User__dropdown-square {
+.User__dropdown__square {
     position: absolute;
     top: -5px;
     right: 44px;
@@ -55,7 +55,7 @@
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
 }
 
-.Use__dropdown__options {
+.User__dropdown__options {
     font-size: 14px;
     width: 134px;
     color: black;

@@ -17,7 +17,7 @@ export const User = () => {
       {
         isOpen && (
           <div className={'User__dropdown'}>
-            <div className={'User__dropdown'}></div>
+            <div className={'User__dropdown__square'}></div>
             <div className={'User__dropdown__options'}>
               {
                 options.map((option: string) => <div key={option} className={'User__dropdown__options__option'}>{option}</div>)
