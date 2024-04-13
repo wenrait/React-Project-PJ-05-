@@ -1,14 +1,16 @@
 .Header, .Footer {
     display: flex;
+    align-items: center;
     justify-content: space-between;
 
     width: 100%;
     max-width: 1235px;
 
-    padding: 1rem;
+    padding-inline: 1rem;
 
     background: rgb(0, 103, 163);
     color: white;
+    height: 55px;
 }
 
 .Header__title {
