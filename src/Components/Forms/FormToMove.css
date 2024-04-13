@@ -1,0 +1,90 @@
+.form-move {
+    max-height: 86px;
+
+    animation: fadeInForm 0.5s ease-in-out;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.select {
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
+    padding: 10px;
+    border: 0;
+    border-radius: 5px;
+    margin-right: 0.75rem;
+}
+
+.selected-option {
+    background-color: white;
+    border-radius: 5px;
+    position: relative;
+}
+
+.selected-option:hover {
+    background-color: rgb(222, 222, 222);
+}
+
+.selected-option, .option {
+    display: flex;
+    align-items: center;
+    min-height: 42px;
+    box-sizing: border-box;
+    padding: 10px;
+
+    transition: 0.2s;
+
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    cursor: pointer;
+}
+
+.option:hover {
+    background-color: rgb(222, 222, 222);
+}
+
+.option:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.option:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.options {
+    position: absolute;
+    top: calc(100% - 32px - 0.75rem);
+    width: calc(100% - 1.5rem);
+    max-height: 250px;
+
+    overflow-y: auto;
+    background: white;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+
+    animation: dropdown 0.5s ease-in-out;
+}
+
+.option {
+    padding: 10px;
+
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.selected-option-arrow {
+    position: absolute;
+    right: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+
+    transition: 0.2s;
+}

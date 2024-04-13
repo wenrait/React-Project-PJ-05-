@@ -1,0 +1,14 @@
+.form-to-edit {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.form-to-edit-input {
+    font-size: 18px;
+    border: 0;
+    padding: 0;
+    height: 22px;
+    outline: none;
+    background: transparent;
+}

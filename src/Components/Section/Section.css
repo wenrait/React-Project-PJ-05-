@@ -1,0 +1,36 @@
+.header, .footer {
+    display: flex;
+    justify-content: space-between;
+
+    width: 100%;
+    max-width: 1235px;
+
+    padding: 1rem;
+
+    background: rgb(0, 103, 163);
+    color: white;
+}
+
+.header-title {
+    margin: 0;
+    font-size: 28px;
+    font-weight: 400;
+}
+
+.footer-tasks-container {
+    display: flex;
+    gap: 2rem;
+}
+
+@media (max-width: 600px) {
+    .header {
+        justify-content: flex-end;
+    }
+    .header-title {
+        display: none;
+    }
+    .footer {
+        display: none;
+    }
+
+}

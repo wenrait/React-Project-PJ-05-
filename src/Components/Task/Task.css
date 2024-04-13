@@ -1,0 +1,50 @@
+.task-details {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    flex: 1;
+
+    max-width: 1235px;
+
+    background: rgba(235, 236, 240, 1);
+
+    border-radius: 10px;
+    box-sizing: border-box;
+
+    margin: 0.75rem;
+
+    padding: 1.5rem;
+    position: relative;
+
+    animation: fadeInRight 0.5s ease-in-out;
+}
+
+
+.task-details-title {
+    margin: 0;
+}
+
+.task-details-text {
+    margin: 0;
+    font-size: 18px;
+
+    cursor: pointer;
+}
+
+.details-button {
+    position: absolute;
+    right: 1.5rem;
+    top: 1.5rem;
+    border-radius: 50%;
+
+    transition: 0.2s;
+    background-color: transparent;
+}
+
+.details-svg {
+    transform: rotate(45deg);
+}
+
+.details-button:hover {
+    background-color: rgb(222, 222, 222);
+}

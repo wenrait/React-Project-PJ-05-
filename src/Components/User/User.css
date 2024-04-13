@@ -1,0 +1,99 @@
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    position: relative;
+}
+
+.user-avatar {
+    display: block;
+}
+
+.user-avatar-container {
+    background: white;
+    height: 40px;
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+
+}
+
+.user-button {
+    width: 24px;
+    height: 24px;
+
+    padding: 0;
+    border: 0;
+    background: transparent;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    cursor: pointer;
+    transition: 0.2s;
+    border-radius: 50%;
+}
+
+.user-button:hover {
+    background: rgba(0, 0, 0, 0.2)
+}
+
+.user-dropdown {
+    position: absolute;
+    top: calc(100% + 0.65rem);
+    right: 0;
+    z-index: 1;
+}
+
+
+.square {
+    position: absolute;
+    top: -5px;
+    right: 44px;
+    width: 11px;
+    height: 11px;
+    transform: rotate(45deg);
+
+    background-color: white;
+    z-index: -1;
+    animation: dropdown 0.5s ease-in-out;
+
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.user-dropdown-options {
+    font-size: 14px;
+    width: 134px;
+    color: black;
+    background-color: white;
+    border-radius: 5px;
+
+    animation: dropdown 0.5s ease-in-out;
+
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.15);
+}
+
+.user-dropdown-option {
+    padding: 8px;
+    cursor: pointer;
+    z-index: 2;
+
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+.user-dropdown-option:first-child {
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+.user-dropdown-option:last-child {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+
+.user-dropdown-option:hover {
+    background-color: rgb(222, 222, 222);
+}

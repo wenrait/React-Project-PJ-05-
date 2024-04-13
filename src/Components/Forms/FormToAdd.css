@@ -1,0 +1,8 @@
+.form-add {
+    max-height: none;
+    animation: fadeInForm 0.5s ease-in-out;
+}
+
+.form-add > input {
+    animation: fadeIn 0.5s ease-in-out;
+}
